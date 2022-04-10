@@ -36,7 +36,7 @@ with open('coco_imglab.json') as json_file:
        if kk[0] == str(key):
         jsonOut += '\n\t\t\t{"label":"'
         jsonOut += str(kk[1])
-        jsonOut += '","coordinates":{"x":' + str(round(v[0])) + ',"y":' + str(round(v[1])) + ',"width":' + str(round(v[2])) + ',"height":' + str(round(v[3])) + '}}'
+        jsonOut += '","coordinates":{"x":' + str(round(v[0] + (v[2] / 2))) + ',"y":' + str(round(v[1] + (v[3] / 2))) + ',"width":' + str(round(v[2])) + ',"height":' + str(round(v[3])) + '}}'
         jsonOut += ','
      jsonOut = jsonOut[0:-1]
      jsonOut += '\n\t\t]\n'
